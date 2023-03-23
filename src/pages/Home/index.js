@@ -1,19 +1,13 @@
 import React from "react";
+import photo from "../../images/homePageImage.jpeg"
+import "./style.css";
 
 function Home() {
     return (
-        <main>
             <section className="introduction">
-                <div className="row">
-                    <div className="col">
-                        <h1>Homepage content</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
-                </div>
+               <img src={photo} id="photo" />
             </section>
-        </main>
+        
     );
 }
 
