@@ -4,12 +4,14 @@ import Home from './pages/Home';
 import Recipes from './pages/Recipes';
 import Saved from './pages/Saved';
 import ShoppingList from './pages/ShoppingList';
-import Navigation from './components/Navigation'
+import Navigation from './components/Navigation';
+import Header from './components/Header';
 
 function App() {
   return (
     <Router basename="/">
       <div>
+        <Header />
         <Navigation />
         <div className="container">
           <Routes>

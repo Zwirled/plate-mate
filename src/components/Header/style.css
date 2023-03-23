@@ -1,0 +1,10 @@
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#logo {
+    width: 30vw;
+
+}
