@@ -7,12 +7,14 @@ import ShoppingList from './pages/ShoppingList';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Container from '@mui/material/Container';
+import RecipeApi from './components/RecipeApi';
 
 function App() {
   return (
     <Router basename="/">
       <div>
         <Header />
+        <RecipeApi />
         <Navigation />
         <Container>
           <Routes>
