@@ -1,0 +1,62 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --pink: #F7E5E0;
+    --brown: #C5A59D;
+    --green: #A1BAA2;
+}
+
+header {
+    margin-top: 20px;
+}
+
+.navigationContainer {
+    background-color: var(--green);
+    position: relative;
+    z-index: 1;
+}
+
+nav ul li button {
+    color: var(--green);
+}
+
+nav .pages {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+nav .pages .navItem {
+    list-style-type: none;
+}
+
+nav .pages .navItem button {
+    color: var(--black);
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav .pages .navItem button:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+nav .pages .navItem button:hover {
+    color: white;
+}
+
+nav .pages .navItem button:hover:after {
+    width: 100%;
+}
