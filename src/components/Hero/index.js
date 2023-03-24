@@ -24,7 +24,6 @@ function Hero() {
                     nextEl: ".swiper-button-next",
                 }}
                 modules={[Navigation]}
-                pagination={true}
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>
