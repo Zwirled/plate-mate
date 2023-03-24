@@ -11,12 +11,26 @@
     cursor: pointer;
 }
 
+.swiper-arrow img {
+    transition: all 0.5s ease;
+}
+
+.swiper-arrow:hover img {
+    transform: scale(1.1);
+}
+
 .swiper-button-prev {
     left: 20px;
 }
 
 .swiper-button-next {
     right: 20px;
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: auto;
 }
 
 .swiper {

@@ -22,6 +22,7 @@ function Hero() {
                 navigation={{
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next",
+                    disabledClass: "swiper-button-disabled"
                 }}
                 modules={[Navigation]}
             >
