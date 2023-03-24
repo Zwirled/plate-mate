@@ -8,14 +8,15 @@ import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Container from '@mui/material/Container';
 import RecipeApi from './components/RecipeApi';
+import Footer from './components/Footer'
 
 function App() {
   return (
     <Router basename="/">
       <div>
         <Header />
-        <RecipeApi />
         <Navigation />
+        <RecipeApi />
         <Container>
           <Routes>
             <Route exact path="/" element={<Home />} end={true} />
@@ -24,6 +25,7 @@ function App() {
             <Route path="/shopping-list" element={<ShoppingList />} />
           </Routes>
         </Container>
+        <Footer />
       </div>
     </Router>
   );
