@@ -1,3 +1,24 @@
+
+.heroSlider {
+    position: relative;
+}
+
+.swiper-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.swiper-button-prev {
+    left: 20px;
+}
+
+.swiper-button-next {
+    right: 20px;
+}
+
 .swiper {
     z-index: 0;
 }
