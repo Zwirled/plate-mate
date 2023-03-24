@@ -6,11 +6,63 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import foodPlaceholder from "../../images/foodPlaceHolder.jpeg";
 
 function Recipes() {
   return (
     <main>
+      <h1>Recipe & Meal Ideas</h1>
+      <Grid id="filter" container spacing={1} columns={10}>
+        <Grid item xs={5} md={2}>
+          <Typography>Filter:</Typography>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+        <Grid item xs={5} md={2}>
+          <ButtonUnstyled size="small" color="primary">
+            Option
+          </ButtonUnstyled>
+        </Grid>
+      </Grid>
       <Grid id="feedGrid" container spacing={2}>
         <Grid item xs={12} md={4}>
           <Card sx={{ maxWidth: 345 }}>
@@ -27,10 +79,8 @@ function Recipes() {
                 </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                Save
-              </Button>
+            <CardActions id="buttonContainer">
+              <ButtonUnstyled id="saveButton">Save</ButtonUnstyled>
             </CardActions>
           </Card>
         </Grid>
