@@ -1,2 +1,16 @@
+<<<<<<< HEAD
+=======
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --pink: #F7E5E0;
+  --brown: #C5A59D;
+  --green: #A1BAA2;
+}
+
+.App {
+  text-align: center;
+}
+>>>>>>> 1e0a9dfa1762cae7dc55230cb96051e782cecec7
 
 
