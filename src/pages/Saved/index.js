@@ -1,8 +1,10 @@
 import React from "react";
+import Container from '@mui/material/Container';
 
 function Saved() {
     return (
         <main>
+            <Container>
             <section className="introduction">
                 <div className="row">
                     <div className="col">
@@ -12,7 +14,8 @@ function Saved() {
                         </p>
                     </div>
                 </div>
-            </section>
+                </section>
+            </Container>
         </main>
     );
 }

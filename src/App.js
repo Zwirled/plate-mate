@@ -6,7 +6,6 @@ import Saved from './pages/Saved';
 import ShoppingList from './pages/ShoppingList';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
-import Container from '@mui/material/Container';
 import RecipeApi from './components/RecipeApi';
 import Footer from './components/Footer'
 
@@ -17,14 +16,12 @@ function App() {
         <Header />
         <Navigation />
         <RecipeApi />
-        <Container>
           <Routes>
             <Route exact path="/" element={<Home />} end={true} />
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/saved" element={<Saved />} />
             <Route path="/shopping-list" element={<ShoppingList />} />
           </Routes>
-        </Container>
         <Footer />
       </div>
     </Router>

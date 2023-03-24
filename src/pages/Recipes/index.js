@@ -8,10 +8,12 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import foodPlaceholder from "../../images/foodPlaceHolder.jpeg";
+import Container from '@mui/material/Container';
 
 function Recipes() {
   return (
     <main>
+      <Container>
       <h1>Recipe & Meal Ideas</h1>
       <Grid id="filter" container spacing={1} columns={10}>
         <Grid item xs={5} md={2}>
@@ -129,6 +131,7 @@ function Recipes() {
           </Card>
         </Grid>
       </Grid>
+      </Container>
     </main>
   );
 }
