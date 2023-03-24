@@ -36,51 +36,49 @@ function Navigation() {
                 <Container maxWidth="lg">
                     <Grid container spacing={2} >
                         <Grid xs={12}>
-                            <item>
-                                <nav className="navDesktop">
-                                    <ul className={`pages ${isOpen ? 'open' : ''}`}>
-                                        {pages.map((page) => (
-                                            <li className="navItem" key={page.path}>
-                                                <NavLink
-                                                    to={page.path}
-                                                    end={page.end}
-                                                    className={({ isActive }) =>
-                                                        isActive ? 'nav-link active' : 'nav-link'
-                                                    }
-                                                >
-                                                    <ButtonUnstyled>
-                                                        {page.name}
-                                                    </ButtonUnstyled>
-                                                </NavLink>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </nav>
-                                <nav className="navMobile">
-                                    <div class="mob">
-                                        <ButtonUnstyled>
-                                            Menu
-                                        </ButtonUnstyled>
-                                    </div>
-                                    <ul className={`pages ${isOpen ? 'open' : ''}`}>
-                                        {pages.map((page) => (
-                                            <li className="navItem" key={page.path}>
-                                                <NavLink
-                                                    to={page.path}
-                                                    end={page.end}
-                                                    className={({ isActive }) =>
-                                                        isActive ? 'nav-link active' : 'nav-link'
-                                                    }
-                                                >
-                                                    <ButtonUnstyled>
-                                                        {page.name}
-                                                    </ButtonUnstyled>
-                                                </NavLink>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </nav>
-                            </item>
+                            <nav className="navDesktop">
+                                <ul className={`pages ${isOpen ? 'open' : ''}`}>
+                                    {pages.map((page) => (
+                                        <li className="navItem" key={page.path}>
+                                            <NavLink
+                                                to={page.path}
+                                                end={page.end}
+                                                className={({ isActive }) =>
+                                                    isActive ? 'nav-link active' : 'nav-link'
+                                                }
+                                            >
+                                                <ButtonUnstyled>
+                                                    {page.name}
+                                                </ButtonUnstyled>
+                                            </NavLink>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </nav>
+                            <nav className="navMobile">
+                                <div className="mob">
+                                    <ButtonUnstyled>
+                                        Menu
+                                    </ButtonUnstyled>
+                                </div>
+                                <ul className={`pages ${isOpen ? 'open' : ''}`}>
+                                    {pages.map((page) => (
+                                        <li className="navItem" key={page.path}>
+                                            <NavLink
+                                                to={page.path}
+                                                end={page.end}
+                                                className={({ isActive }) =>
+                                                    isActive ? 'nav-link active' : 'nav-link'
+                                                }
+                                            >
+                                                <ButtonUnstyled>
+                                                    {page.name}
+                                                </ButtonUnstyled>
+                                            </NavLink>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </nav>
                         </Grid>
                     </Grid>
                 </Container >
