@@ -1,0 +1,15 @@
+.swiper-wrapper {
+    max-height: 550px;
+}
+
+.swiper-slide {
+    height: auto;
+    width: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

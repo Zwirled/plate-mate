@@ -6,7 +6,6 @@ import Saved from './pages/Saved';
 import ShoppingList from './pages/ShoppingList';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
-import RecipeApi from './components/RecipeApi';
 import Footer from './components/Footer'
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
       <div>
         <Header />
         <Navigation />
-        <RecipeApi />
           <Routes>
             <Route exact path="/" element={<Home />} end={true} />
             <Route path="/recipes" element={<Recipes />} />

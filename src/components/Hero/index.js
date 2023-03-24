@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import './style.css';
 
 function Hero() {
     const images = ['slider-image-1.webp', 'slider-image-2.webp', 'slider-image-3.webp', 'slider-image-4.webp', 'slider-image-5.jpeg'];
@@ -8,8 +9,8 @@ function Hero() {
         <Swiper
             spaceBetween={0}
             slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            navigation={true}
+            pagination={true}
         >
             {images.map((image, index) => (
                 <SwiperSlide key={index}>
