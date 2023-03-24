@@ -5,7 +5,7 @@ import logo from "../../images/plateMateLogo.png";
 function Header() {
     return (
             <section className="introduction">
-               <img src={logo} id="logo" />
+               <img src={logo} id="logo" alt="PlateMate logo" />
             </section>
         
     );

@@ -18,7 +18,6 @@ function Navigation() {
 
     useEffect(() => {
         const mobElement = document.querySelector('.mob');
-        const pagesElement = document.querySelector('.pages');
         mobElement.addEventListener('click', () => {
             setIsOpen(!isOpen);
         });
