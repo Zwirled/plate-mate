@@ -1,18 +1,21 @@
 import React from "react";
+import Container from '@mui/material/Container';
 
 function ShoppingList() {
     return (
         <main>
-            <section className="introduction">
-                <div className="row">
-                    <div className="col">
-                        <h1>Shopping List content</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet.
-                        </p>
+            <Container>
+                <section className="introduction">
+                    <div className="row">
+                        <div className="col">
+                            <h1>Shopping List content</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </Container>
         </main>
     );
 }

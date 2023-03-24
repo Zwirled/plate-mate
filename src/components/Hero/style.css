@@ -1,0 +1,54 @@
+
+.heroSlider {
+    position: relative;
+}
+
+.swiper-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.swiper-arrow img {
+    transition: all 0.5s ease;
+}
+
+.swiper-arrow:hover img {
+    transform: scale(1.1);
+}
+
+.swiper-button-prev {
+    left: 20px;
+}
+
+.swiper-button-next {
+    right: 20px;
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: auto;
+}
+
+.swiper {
+    z-index: 0;
+}
+
+.swiper-wrapper {
+    max-height: 550px;
+}
+
+.swiper-slide {
+    height: auto;
+    width: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

@@ -1,13 +1,10 @@
 import React from "react";
-import photo from "../../images/homePageImage.jpeg"
 import "./style.css";
+import Hero from '../../components/Hero'
 
 function Home() {
     return (
-            <section className="introduction">
-               <img src={photo} id="photo" />
-            </section>
-        
+        <Hero />
     );
 }
 

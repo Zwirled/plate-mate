@@ -90,7 +90,6 @@ nav .mob button {
     nav .mob {
         display: block;
         text-align: center;
-        margin-bottom: 10px;
     }
 
     nav .pages {
@@ -108,5 +107,14 @@ nav .mob button {
 
     .navMobile .pages.open {
         display: flex;
+    }
+
+    .navItem {
+        border-top: 1px solid var(--white);
+        padding-top: 10px;
+    }
+
+    .navItem:first-child {
+        margin-top: 10px;
     }
 }

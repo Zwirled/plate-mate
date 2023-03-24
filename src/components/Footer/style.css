@@ -1,0 +1,23 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --pink: #F7E5E0;
+    --brown: #C5A59D;
+    --green: #A1BAA2;
+}
+
+footer {
+    background-color: var(--pink);
+    text-align: center;
+    color: var(--black);
+}
+
+footer a {
+    color: var(--brown);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--black);
+}

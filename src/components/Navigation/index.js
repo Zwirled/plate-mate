@@ -4,7 +4,6 @@ import ButtonUnstyled from '@mui/base/ButtonUnstyled';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import './style.css';
-import logo from '../../images/plateMateLogo.png';
 
 
 function Navigation() {
@@ -19,7 +18,6 @@ function Navigation() {
 
     useEffect(() => {
         const mobElement = document.querySelector('.mob');
-        const pagesElement = document.querySelector('.pages');
         mobElement.addEventListener('click', () => {
             setIsOpen(!isOpen);
         });
