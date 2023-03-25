@@ -47,3 +47,35 @@ ul.recipeModalList li {
     margin-bottom: 5px;
     font-size: 14px;
 }
+
+@media only screen and (max-width: 899px) {
+    .recipeModalContainer {
+        height: calc(100% - 200px);
+    }
+    .right {
+        width: 75%;
+    }
+
+    .left {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .recipeModalContainer {
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .right, .left {
+        width: 100%;
+    }
+
+    .left {
+        max-height: 400px;
+    }
+
+    .right {
+        overflow: unset;
+    }
+}

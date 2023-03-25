@@ -39,7 +39,7 @@ button {
     padding-top: 10px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 899px) {
     .recipeCardItem {
     flex-basis: calc(50% - 12.5px) !important;
 }
