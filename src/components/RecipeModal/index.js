@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { styled, Box } from '@mui/system';
 import ModalUnstyled from '@mui/base/ModalUnstyled';
+import './style.css';
 
 function RecipeModal(props) {
     const BackdropUnstyled = React.forwardRef((props, ref) => {
@@ -45,10 +46,6 @@ function RecipeModal(props) {
     `;
 
     const style = (theme) => ({
-        width: 400,
-        bgcolor: theme.palette.mode === 'dark' ? '#0A1929' : 'white',
-        border: '2px solid currentColor',
-        padding: '16px 32px 24px 32px',
     });
 
     const { title, image, ingredients, method, ...other } = props;
@@ -65,7 +62,7 @@ function RecipeModal(props) {
 
     return (
         <div>
-            <StyledModal
+            <StyledModal className="recipeModal"
                 aria-labelledby="unstyled-modal-title"
                 aria-describedby="unstyled-modal-description"
                 open={open}
@@ -73,19 +70,29 @@ function RecipeModal(props) {
                 slots={{ backdrop: Backdrop }}
                 {...other}
             >
-                <Box sx={style}>
-                    <div>
-                        <img src={image} alt={ title} />
+                <Box sx={style} className="recipeModalContainer">
+                    <div className="left">
+                        <img className="recipeModalImage" src={image} alt={title} />
                     </div>
-                    <h2 id="unstyled-modal-title">{title}</h2>
-                    <ul>
-                        {ingredients.map((ingredient, index) => (
-                            <li key={index}>
-                                {`${ingredient.amount} ${ingredient.name}`}
-                            </li>
-                        ))}
-                    </ul>
-                    <p>{method}</p>
+                    <div className="right">
+                        <div>
+                            <h2 className="recipeModalTitle">{title}</h2>
+                        </div>
+                        <div>
+                            <h3>Ingredients:</h3>
+                            <ul className="recipeModalList">
+                                {ingredients.map((ingredient, index) => (
+                                    <li key={index}>
+                                        {`${ingredient.amount} ${ingredient.name}`}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Method:</h3>
+                            <p>{method}</p>
+                        </div>
+                    </div>
                 </Box>
             </StyledModal>
         </div>
