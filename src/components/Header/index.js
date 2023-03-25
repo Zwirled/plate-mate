@@ -1,13 +1,16 @@
 import React from 'react';
 import './style.css';
 import logo from "../../images/plateMateLogo.png";
+import Navigation from "../Navigation";
 
 function Header() {
     return (
-            <section className="introduction">
+        <header>
+            <section className="topLogo">
                <img src={logo} id="logo" alt="PlateMate logo" />
             </section>
-        
+            <Navigation/>
+        </header>
     );
 }
 

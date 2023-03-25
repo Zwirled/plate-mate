@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Recipes from './pages/Recipes';
 import Saved from './pages/Saved';
 import ShoppingList from './pages/ShoppingList';
-import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Footer from './components/Footer'
 
@@ -13,7 +12,6 @@ function App() {
     <Router basename="/">
       <div>
         <Header />
-        <Navigation />
           <Routes>
             <Route exact path="/" element={<Home />} end={true} />
             <Route path="/recipes" element={<Recipes />} />
