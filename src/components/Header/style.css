@@ -1,3 +1,7 @@
+header {
+    overflow: hidden;
+}
+
 .topLogo {
     display: flex;
     flex-direction: row;

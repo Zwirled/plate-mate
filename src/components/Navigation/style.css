@@ -84,6 +84,11 @@ nav .mob button {
 }
 
 @media only screen and (max-width: 520px) {
+    .navigationContainer {
+        position: fixed;
+        width: 100%;
+    }
+
     nav .mob {
         display: block;
         text-align: center;
