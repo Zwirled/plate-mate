@@ -2,9 +2,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './style.css';
 import { Navigation } from "swiper";
+import { NavLink } from 'react-router-dom';
+import ButtonUnstyled from '@mui/base/ButtonUnstyled';
 
 function Hero() {
     const images = ['slider-image-1.webp', 'slider-image-2.webp', 'slider-image-3.webp', 'slider-image-4.webp', 'slider-image-5.jpeg'];
+    const recipes = [
+        { name: 'Recipes', path: '/recipes' },
+    ];
 
     return (
         <div class="heroSlider">
@@ -32,6 +37,16 @@ function Hero() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <div className="overlayCta">
+                <div className="overlayContent">
+                <h1>Your companion for hassle-free meal planning.</h1>
+                <NavLink to={recipes[0].path}>
+                    <ButtonUnstyled>
+                        Browse recipes
+                    </ButtonUnstyled>
+                    </NavLink>
+                </div>
+            </div>
         </div>
     );
 }
