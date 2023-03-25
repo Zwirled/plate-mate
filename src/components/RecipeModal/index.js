@@ -51,6 +51,8 @@ function RecipeModal(props) {
         padding: '16px 32px 24px 32px',
     });
 
+    const { title, ingredients, method, ...other } = props;
+
     const [open, setOpen] = React.useState(false);
 
     const handleOpen = () => {
@@ -69,11 +71,18 @@ function RecipeModal(props) {
                 open={open}
                 onClose={handleClose}
                 slots={{ backdrop: Backdrop }}
-                {...props}
+                {...other}
             >
                 <Box sx={style}>
-                    <h2 id="unstyled-modal-title">Text in a modal</h2>
-                    <p id="unstyled-modal-description">Aliquid amet deserunt earum!</p>
+                    <h2 id="unstyled-modal-title">{title}</h2>
+                    <ul>
+                        {ingredients.map((ingredient, index) => (
+                            <li key={index}>
+                                {`${ingredient.amount} ${ingredient.name}`}
+                            </li>
+                        ))}
+                    </ul>
+                    <p>{method}</p>
                 </Box>
             </StyledModal>
         </div>

@@ -51,17 +51,13 @@ function RecipeCard({ name, image, ingredients, instructions }) {
                     </CardActions>
                 </Card>
             </Grid>
-            <RecipeModal open={open} onClose={handleClose}>
-                <h2>{name}</h2>
-                <ul>
-                    {ingredients.map((ingredient, index) => (
-                        <li key={index}>
-                            {ingredient.amount} {ingredient.name}
-                        </li>
-                    ))}
-                </ul>
-                <p>{instructions}</p>
-            </RecipeModal>
+            <RecipeModal
+                open={open}
+                onClose={handleClose}
+                title={name}
+                ingredients={ingredients}
+                method={instructions}
+            />
         </div>
     );
 }
