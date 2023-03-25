@@ -5,7 +5,8 @@
 }
 
 .recipeCardItem {
-    flex-basis: calc(33.333 - 25px) !important;
+    flex-basis: calc(33.33% - 16.7px) !important;
+    justify-content: center;
 }
 
 button {
@@ -36,4 +37,16 @@ button {
     margin-bottom: 20px;
     padding: 15px;
     padding-top: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .recipeCardItem {
+    flex-basis: calc(50% - 12.5px) !important;
+}
+}
+
+@media only screen and (max-width: 550px) {
+    .recipeCardItem {
+    flex-basis: 100% !important;
+}
 }
