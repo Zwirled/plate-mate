@@ -22,8 +22,6 @@ function Hero() {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
                 navigation={{
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next",
@@ -39,7 +37,7 @@ function Hero() {
             </Swiper>
             <div className="overlayCta">
                 <div className="overlayContent">
-                <h1>Your companion for hassle-free meal planning.</h1>
+                <h1 className="overlayText">Your companion for hassle-free meal planning.</h1>
                 <NavLink to={recipes[0].path}>
                     <ButtonUnstyled>
                         Browse recipes
