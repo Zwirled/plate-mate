@@ -37,7 +37,7 @@ function Hero() {
             </Swiper>
             <div className="overlayCta">
                 <div className="overlayContent">
-                <h1>Your companion for hassle-free meal planning.</h1>
+                <h1 className="overlayText">Your companion for hassle-free meal planning.</h1>
                 <NavLink to={recipes[0].path}>
                     <ButtonUnstyled>
                         Browse recipes

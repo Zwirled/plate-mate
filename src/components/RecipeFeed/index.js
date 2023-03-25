@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import RecipeCard from '../RecipeCard';
+import Container from '@mui/material/Container';
+import { Grid } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import ButtonUnstyled from "@mui/base/ButtonUnstyled";
+import './style.css';
 
 function RecipeFeed() {
     const [recipes, setRecipes] = useState([]);
@@ -20,7 +25,61 @@ function RecipeFeed() {
     };
 
     return (
-        <div>
+        <Container>
+            <h1>Recipe & Meal Ideas</h1>
+            <Grid id="filter" container spacing={1} columns={10}>
+                <Grid item xs={5} md={2}>
+                    <Typography>Filter:</Typography>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+                <Grid item xs={5} md={2}>
+                    <ButtonUnstyled size="small" color="primary">
+                        Option
+                    </ButtonUnstyled>
+                </Grid>
+            </Grid>
+            <Grid id="feedGrid" container spacing={2}>
+
+            </Grid>
             {recipes.map((recipe) => (
                 <RecipeCard
                     key={recipe.idMeal}
@@ -35,7 +94,7 @@ function RecipeFeed() {
                     instructions={recipe.strInstructions}
                 />
             ))}
-        </div>
+        </Container>
     );
 }
 
