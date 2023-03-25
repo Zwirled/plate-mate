@@ -6,14 +6,11 @@
     --green: #A1BAA2;
 }
 
-header {
-    margin-top: 20px;
-}
-
 .navigationContainer {
     background-color: var(--green);
     position: relative;
     z-index: 1;
+    padding: 10px 0px;
 }
 
 nav ul li button {
@@ -87,6 +84,11 @@ nav .mob button {
 }
 
 @media only screen and (max-width: 520px) {
+    .navigationContainer {
+        position: fixed;
+        width: 100%;
+    }
+
     nav .mob {
         display: block;
         text-align: center;

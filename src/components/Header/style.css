@@ -1,10 +1,14 @@
-section {
+header {
+    overflow: hidden;
+}
+
+.topLogo {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 #logo {
-    width: 30vw;
-
+    width: 300px;
+    padding: 20px 0px;
 }
