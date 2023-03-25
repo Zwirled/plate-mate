@@ -12,7 +12,7 @@ function Hero() {
     ];
 
     return (
-        <div class="heroSlider">
+        <div className="heroSlider">
             <div className="swiper-button-prev swiper-arrow">
                 <img src={process.env.PUBLIC_URL + '/slider/arrow-prev.svg'} alt='prev' />
             </div>
