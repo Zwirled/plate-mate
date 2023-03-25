@@ -77,23 +77,22 @@ function RecipeFeed() {
                     </ButtonUnstyled>
                 </Grid>
             </Grid>
-            <Grid id="feedGrid" container spacing={2}>
-
+            <Grid id="feedGrid" container spacing={0}>
+                {recipes.map((recipe) => (
+                    <RecipeCard
+                        key={recipe.idMeal}
+                        name={recipe.strMeal}
+                        image={recipe.strMealThumb}
+                        ingredients={Object.entries(recipe)
+                            .filter(([key, value]) => key.startsWith('strIngredient') && value)
+                            .map(([key, value]) => ({
+                                name: value,
+                                amount: recipe[`strMeasure${key.slice(13)}`],
+                            }))}
+                        instructions={recipe.strInstructions}
+                    />
+                ))}
             </Grid>
-            {recipes.map((recipe) => (
-                <RecipeCard
-                    key={recipe.idMeal}
-                    name={recipe.strMeal}
-                    image={recipe.strMealThumb}
-                    ingredients={Object.entries(recipe)
-                        .filter(([key, value]) => key.startsWith('strIngredient') && value)
-                        .map(([key, value]) => ({
-                            name: value,
-                            amount: recipe[`strMeasure${key.slice(13)}`],
-                        }))}
-                    instructions={recipe.strInstructions}
-                />
-            ))}
         </Container>
     );
 }

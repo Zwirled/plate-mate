@@ -51,7 +51,7 @@ function RecipeModal(props) {
         padding: '16px 32px 24px 32px',
     });
 
-    const { title, ingredients, method, ...other } = props;
+    const { title, image, ingredients, method, ...other } = props;
 
     const [open, setOpen] = React.useState(false);
 
@@ -74,6 +74,9 @@ function RecipeModal(props) {
                 {...other}
             >
                 <Box sx={style}>
+                    <div>
+                        <img src={image} alt={ title} />
+                    </div>
                     <h2 id="unstyled-modal-title">{title}</h2>
                     <ul>
                         {ingredients.map((ingredient, index) => (
