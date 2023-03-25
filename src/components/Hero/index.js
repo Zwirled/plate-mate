@@ -22,8 +22,6 @@ function Hero() {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
                 navigation={{
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next",
