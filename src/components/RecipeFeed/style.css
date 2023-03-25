@@ -1,3 +1,10 @@
+#feedGrid {
+    margin: auto;
+    gap: 25px;
+}
+
 h1 {
-    color: black;
+    text-align: center;
+    margin-top: 40px;
+    color: var(--black);
 }

@@ -6,6 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea, CardActions } from "@mui/material";
 import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import RecipeModal from '../RecipeModal';
+import './style.css';
 
 function RecipeCard({ name, image, ingredients, instructions }) {
     const [open, setOpen] = React.useState(false);
@@ -19,9 +20,8 @@ function RecipeCard({ name, image, ingredients, instructions }) {
     };
 
     return (
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} className="recipeCardItem">
             <Card>
-                <CardActionArea>
                     <CardMedia
                         component="img"
                         height="175"
@@ -31,7 +31,6 @@ function RecipeCard({ name, image, ingredients, instructions }) {
                     <CardContent>
                         <h2>{name}</h2>
                     </CardContent>
-                </CardActionArea>
                 <CardActions id="buttonContainer">
                     <ButtonUnstyled id="viewRecipeButton" onClick={handleOpen}>View recipe</ButtonUnstyled>
                     <ButtonUnstyled id="saveButton">Save</ButtonUnstyled>
