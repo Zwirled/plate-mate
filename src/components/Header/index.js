@@ -7,7 +7,7 @@ function Header() {
     return (
         <header>
             <section className="topLogo">
-               <img src={logo} id="logo" alt="PlateMate logo" />
+               <img src={logo} id="logo" alt="Plate Mate logo" />
             </section>
             <Navigation/>
         </header>
