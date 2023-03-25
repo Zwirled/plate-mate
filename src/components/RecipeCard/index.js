@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import { CardActions } from "@mui/material";
 import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import RecipeModal from '../RecipeModal';
 import './style.css';
