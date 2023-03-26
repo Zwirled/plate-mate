@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import RecipeFilter from '../RecipeFilter';
 import RecipeCard from '../RecipeCard';
 import Container from '@mui/material/Container';
@@ -7,17 +7,19 @@ import './style.css';
 
 function RecipeFeed() {
     const [recipes, setRecipes] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState('Seafood'); useEffect(() => {
-        getRecipes();
-    }, [selectedCategory]);
+    const [selectedCategory, setSelectedCategory] = useState('Seafood');
 
-    const getRecipes = async () => {
+    const getRecipes = useCallback(async () => {
         const api = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`);
         const data = await api.json();
         const meals = data.meals || [];
 
         setRecipes(meals);
-    };
+    }, [selectedCategory]);
+
+    useEffect(() => {
+        getRecipes();
+    }, [getRecipes]);
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
