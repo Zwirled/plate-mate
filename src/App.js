@@ -7,7 +7,6 @@ import ShoppingList from './pages/ShoppingList';
 import Header from './components/Header';
 import Footer from './components/Footer'
 import useLocalStorage from './components/LocalStorage';
-import RecipeApi from './components/RecipeApi';
 
 function App() {
   const Recipe = [{

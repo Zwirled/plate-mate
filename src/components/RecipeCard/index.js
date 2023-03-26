@@ -44,7 +44,6 @@ function RecipeCard({ name, image, id }) {
                 />
                 <CardContent>
                     <h2>{name}</h2>
-                    <p>{id}</p>
                 </CardContent>
                 <CardActions id="buttonContainer">
                     <ButtonUnstyled id="viewRecipeButton" onClick={handleOpen}>View recipe</ButtonUnstyled>
