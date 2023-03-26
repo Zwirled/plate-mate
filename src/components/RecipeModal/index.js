@@ -7,8 +7,10 @@ import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import './style.css';
 
 function RecipeModal(props) {
+    // State hook for modal open/closed status
     const [open, setOpen] = useState(false);
 
+    // Backdrop component for the modal
     const BackdropUnstyled = React.forwardRef((props, ref) => {
         const { open, className, ...other } = props;
         return (
@@ -20,11 +22,13 @@ function RecipeModal(props) {
         );
     });
 
+    // Prop types for BackdropUnstyled
     BackdropUnstyled.propTypes = {
         className: PropTypes.string.isRequired,
         open: PropTypes.bool,
     };
 
+    // Style the modal component using MUI
     const StyledModal = styled(ModalUnstyled)`
       position: fixed;
       z-index: 1300;
@@ -37,6 +41,7 @@ function RecipeModal(props) {
       justify-content: center;
     `;
 
+    // Style the backdrop component
     const Backdrop = styled(BackdropUnstyled)`
       z-index: -1;
       position: fixed;
@@ -48,17 +53,19 @@ function RecipeModal(props) {
       -webkit-tap-highlight-color: transparent;
     `;
 
+    // Styles for the RecipeModal component
     const style = (theme) => ({
     });
 
+    // Extract required props from parent component
     const { name, image, ingredients, instructions, ...other } = props;
 
+    // Handle function - close the modal
     const handleClose = () => {
         setOpen(false);
     };
 
-    console.log('Ingredients:', ingredients);
-
+    // Handle function - save the recipe in local storage
     const handleSave = () => {
         if (props) {
             const newRecipe = {

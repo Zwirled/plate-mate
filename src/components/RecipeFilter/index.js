@@ -3,11 +3,19 @@ import { Grid } from "@mui/material";
 import './style.css';
 
 function RecipeFilter(props) {
-    const [selectedCategory, setSelectedCategory] = useState(''); const handleCategoryChange = (event) => {
+    // Define the state variables
+    const [selectedCategory, setSelectedCategory] = useState('');
+
+    // Handle function to change category
+    const handleCategoryChange = (event) => {
+        // Update the selected category
         setSelectedCategory(event.target.value);
+        // Set the selected category based on user selection
+        // Calls the parent component's category change function to update the recipes list.
         props.onCategoryChange(event.target.value);
     };
 
+    // Rendering the filter
     return (
         <div>
             <Grid id="filter" container spacing={1} columns={12} className="">
