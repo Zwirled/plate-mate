@@ -10,7 +10,7 @@ function RecipeFilter(props) {
 
     return (
         <div>
-            <Grid id="filter" spacing={1} columns={12} className="">
+            <Grid id="filter" container spacing={1} columns={12} className="">
                 <Grid item xs={12} md={12} className="filterContainer">
                     <select className="filter" value={selectedCategory} onChange={handleCategoryChange}>
                         <option value="">Select Category</option>
