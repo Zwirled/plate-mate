@@ -11,7 +11,6 @@ function RecipeApi() {
 
         );
         const data = await api.json();
-        console.log(data);
     };
     return <div>Check out the console for the objects returned from TheMealDB</div>;
 }

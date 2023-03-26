@@ -31,7 +31,6 @@ function App() {
     <Router basename="/">
       <div>
         <Header />
-        <RecipeApi />
         <Routes>
           <Route exact path="/" element={<Home />} end={true} />
           <Route path="/recipes" element={<Recipes />} />

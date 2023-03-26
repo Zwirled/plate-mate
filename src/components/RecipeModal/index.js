@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { styled, Box } from '@mui/system';
@@ -6,6 +6,8 @@ import ModalUnstyled from '@mui/base/ModalUnstyled';
 import './style.css';
 
 function RecipeModal(props) {
+    const [open, setOpen] = useState(false);
+
     const BackdropUnstyled = React.forwardRef((props, ref) => {
         const { open, className, ...other } = props;
         return (
@@ -48,13 +50,11 @@ function RecipeModal(props) {
     const style = (theme) => ({
     });
 
-    const { title, image, ingredients, method, ...other } = props;
+    const { name, image, ingredients, instructions, ...other } = props;
 
-    const [open, setOpen] = React.useState(false);
-
-    // const handleOpen = () => {
-    //     setOpen(true);
-    // };
+    const handleOpen = () => {
+        setOpen(true);
+    };
 
     const handleClose = () => {
         setOpen(false);
@@ -72,13 +72,14 @@ function RecipeModal(props) {
             >
                 <Box sx={style} className="recipeModalContainer">
                     <div className="left">
-                        <img className="recipeModalImage" src={image} alt={title} />
+                        <img className="recipeModalImage" src={image} alt={name} />
                     </div>
                     <div className="right">
                         <div>
-                            <h2 className="recipeModalTitle">{title}</h2>
+                            <h2 className="recipeModalTitle">{name}</h2>
                         </div>
                         <div>
+                            <h3>ID</h3>
                             <h3>Ingredients:</h3>
                             <ul className="recipeModalList">
                                 {ingredients.map((ingredient, index) => (
@@ -90,7 +91,7 @@ function RecipeModal(props) {
                         </div>
                         <div>
                             <h3>Method:</h3>
-                            <p>{method}</p>
+                            <p>{instructions}</p>
                         </div>
                     </div>
                 </Box>

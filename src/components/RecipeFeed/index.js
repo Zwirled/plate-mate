@@ -17,7 +17,6 @@ function RecipeFeed() {
         const meals = data.meals || [];
 
         setRecipes(meals);
-        console.log(meals);
     };
 
     const handleCategoryChange = (category) => {
@@ -34,13 +33,7 @@ function RecipeFeed() {
                         key={recipe.idMeal}
                         name={recipe.strMeal}
                         image={recipe.strMealThumb}
-                        ingredients={Object.entries(recipe)
-                            .filter(([key, value]) => key.startsWith('strIngredient') && value)
-                            .map(([key, value]) => ({
-                                name: value,
-                                amount: recipe[`strMeasure${key.slice(13)}`],
-                            }))}
-                        instructions={recipe.strInstructions}
+                        id={recipe.idMeal}
                     />
                 ))}
             </Grid>
