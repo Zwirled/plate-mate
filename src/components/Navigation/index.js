@@ -7,8 +7,10 @@ import './style.css';
 
 
 function Navigation() {
+    // Set initial state for mobile navigation
     const [isOpen, setIsOpen] = useState(false);
 
+    // React Router - array of pages and url paths
     const pages = [
         { name: 'Home', path: '/' },
         { name: 'Recipe feed', path: '/recipes' },
@@ -16,11 +18,14 @@ function Navigation() {
         { name: 'Shopping list', path: '/shopping-list' },
     ];
 
+    // Handling mobile navigation click
     useEffect(() => {
         const mobElement = document.querySelector('.mob');
         mobElement.addEventListener('click', () => {
             setIsOpen(!isOpen);
         });
+
+        // Remove event listener
         return () => {
             mobElement.removeEventListener('click', () => {
                 setIsOpen(!isOpen);
@@ -28,6 +33,7 @@ function Navigation() {
         };
     }, [isOpen]);
 
+    // Render navigation component
     return (
         <div className="navigationContainer">
             <Container maxWidth="lg">
