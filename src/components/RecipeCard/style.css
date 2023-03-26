@@ -1,42 +1,32 @@
-#buttonContainer {
-    display: flex;
-    justify-content: center;
-    background-color: #A1BAA2;
-}
-
 .recipeCardItem {
     flex-basis: calc(33.33% - 16.7px) !important;
     justify-content: center;
 }
 
-button {
-    background-color: #F7E5E0;
-    color: black;
-    border: 1px solid #ebd8d3;
-    border-radius: 5px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+.recipeCardTitle {
+    margin: 0;
 }
 
-#saveButton {
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
     background-color: #A1BAA2;
-    color: black;
-    border: 1px solid #90aa91;
-    border-radius: 5px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    gap: 10px;
+    padding: 10px;
 }
 
-
-#filter {
-    width: 50vw;
-    margin: auto;
+#viewRecipeButton {
     background-color: #F7E5E0;
-    margin-bottom: 20px;
-    padding: 15px;
-    padding-top: 10px;
+    color: black;
+    border-radius: 3px !important;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+#viewRecipeButton:hover {
+    background-color: black;
+    color: white;
 }
 
 @media only screen and (max-width: 899px) {

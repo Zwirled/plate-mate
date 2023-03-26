@@ -1,3 +1,4 @@
+// TO-DO: Remove - obsolete code - copied and amended into a different component
 import React, { useEffect } from 'react';
 
 function RecipeApi() {
@@ -7,11 +8,10 @@ function RecipeApi() {
 
     const getRecipe = async () => {
         const api = await fetch(
-            'https://www.themealdb.com/api/json/v1/1/search.php?f=a'
+            'https://www.themealdb.com/api/json/v1/1/list.php?c=list'
 
         );
         const data = await api.json();
-        console.log(data);
     };
     return <div>Check out the console for the objects returned from TheMealDB</div>;
 }

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { styled, Box } from '@mui/system';
 import ModalUnstyled from '@mui/base/ModalUnstyled';
+import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import './style.css';
 
 function RecipeModal(props) {
+    // State hook for modal open/closed status
+    const [open, setOpen] = useState(false);
+
+    // Backdrop component for the modal
     const BackdropUnstyled = React.forwardRef((props, ref) => {
         const { open, className, ...other } = props;
         return (
@@ -17,11 +22,13 @@ function RecipeModal(props) {
         );
     });
 
+    // Prop types for BackdropUnstyled
     BackdropUnstyled.propTypes = {
         className: PropTypes.string.isRequired,
         open: PropTypes.bool,
     };
 
+    // Style the modal component using MUI
     const StyledModal = styled(ModalUnstyled)`
       position: fixed;
       z-index: 1300;
@@ -34,6 +41,7 @@ function RecipeModal(props) {
       justify-content: center;
     `;
 
+    // Style the backdrop component
     const Backdrop = styled(BackdropUnstyled)`
       z-index: -1;
       position: fixed;
@@ -45,19 +53,38 @@ function RecipeModal(props) {
       -webkit-tap-highlight-color: transparent;
     `;
 
+    // Styles for the RecipeModal component
     const style = (theme) => ({
     });
 
-    const { title, image, ingredients, method, ...other } = props;
+    // Extract required props from parent component
+    const { name, image, ingredients, instructions, ...other } = props;
 
-    const [open, setOpen] = React.useState(false);
-
-    // const handleOpen = () => {
-    //     setOpen(true);
-    // };
-
+    // Handle function - close the modal
     const handleClose = () => {
         setOpen(false);
+    };
+
+    // Handle function - save the recipe in local storage
+    const handleSave = () => {
+        if (props) {
+            const newRecipe = {
+                name: name || '',
+                image: image || '',
+                ingredients: ingredients
+                    .filter((ingredient) => ingredient.name && ingredient.amount)
+                    .map((ingredient) => {
+                        return {
+                            name: ingredient.name,
+                            amount: ingredient.amount,
+                        };
+                    }),
+                instructions: instructions || '',
+            };
+            const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+            savedRecipes.push(newRecipe);
+            localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+        }
     };
 
     return (
@@ -72,11 +99,12 @@ function RecipeModal(props) {
             >
                 <Box sx={style} className="recipeModalContainer">
                     <div className="left">
-                        <img className="recipeModalImage" src={image} alt={title} />
+                        <img className="recipeModalImage" src={image} alt={name} />
                     </div>
                     <div className="right">
-                        <div>
-                            <h2 className="recipeModalTitle">{title}</h2>
+                        <div className="recipeModalTop">
+                            <h2 className="recipeModalTitle">{name}</h2>
+                            <ButtonUnstyled id="saveButton" onClick={handleSave}>Save recipe</ButtonUnstyled>
                         </div>
                         <div>
                             <h3>Ingredients:</h3>
@@ -90,7 +118,7 @@ function RecipeModal(props) {
                         </div>
                         <div>
                             <h3>Method:</h3>
-                            <p>{method}</p>
+                            <p>{instructions}</p>
                         </div>
                     </div>
                 </Box>

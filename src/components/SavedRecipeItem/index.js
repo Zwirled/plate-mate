@@ -1,18 +1,13 @@
 import React from 'react';
 
 function SavedRecipeItem() {
-    // retrieve saved recipes from localStorage
-    const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
 
-    const handleRemove = (index) => {
-        const updatedRecipes = [...savedRecipes];
-        updatedRecipes.splice(index, 1);
-        localStorage.setItem('savedRecipes', JSON.stringify(updatedRecipes));
-        window.location.reload();
-    };
+    // Retrieve saved recipes from localStorage
+    const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
 
     return (
         <div>
+            {/* Map through the savedRecipes array and render the information for each recipe */}
             {savedRecipes.map((recipe, index) => (
                 <div key={index}>
                     <h2>{recipe.name}</h2>
@@ -25,7 +20,6 @@ function SavedRecipeItem() {
                     </ul>
                     <h3>Instructions:</h3>
                     <p>{recipe.instructions}</p>
-                    <button onClick={() => handleRemove(index)}>Remove</button>
                 </div>
             ))}
         </div>
