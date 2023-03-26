@@ -1,11 +1,13 @@
 import React from 'react';
 
 function SavedRecipeItem() {
-    // retrieve saved recipes from localStorage
+
+    // Retrieve saved recipes from localStorage
     const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
 
     return (
         <div>
+            {/* Map through the savedRecipes array and render the information for each recipe */}
             {savedRecipes.map((recipe, index) => (
                 <div key={index}>
                     <h2>{recipe.name}</h2>
