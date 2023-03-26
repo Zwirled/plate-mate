@@ -95,8 +95,9 @@ function RecipeModal(props) {
                         <img className="recipeModalImage" src={image} alt={name} />
                     </div>
                     <div className="right">
-                        <div>
+                        <div className="recipeModalTop">
                             <h2 className="recipeModalTitle">{name}</h2>
+                            <ButtonUnstyled id="saveButton" onClick={handleSave}>Save recipe</ButtonUnstyled>
                         </div>
                         <div>
                             <h3>Ingredients:</h3>
@@ -111,9 +112,6 @@ function RecipeModal(props) {
                         <div>
                             <h3>Method:</h3>
                             <p>{instructions}</p>
-                        </div>
-                        <div>
-                            <ButtonUnstyled id="saveButton" onClick={handleSave}>Save recipe</ButtonUnstyled>
                         </div>
                     </div>
                 </Box>

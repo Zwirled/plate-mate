@@ -34,8 +34,29 @@
     object-fit: cover;
 }
 
+.recipeModalTop {
+    position: relative;
+}
+
 h2.recipeModalTitle {
     margin: 0;
+}
+
+#saveButton {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #F7E5E0;
+    color: black;
+    border-radius: 3px !important;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+#viewRecipeButton:hover, #saveButton:hover {
+    background-color: black;
+    color: white;
 }
 
 ul.recipeModalList {

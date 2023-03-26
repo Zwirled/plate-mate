@@ -15,7 +15,7 @@
     padding: 10px;
 }
 
-#viewRecipeButton, #saveButton {
+#viewRecipeButton {
     background-color: #F7E5E0;
     color: black;
     border-radius: 3px !important;
@@ -24,7 +24,7 @@
     margin: 0;
 }
 
-#viewRecipeButton:hover, #saveButton:hover {
+#viewRecipeButton:hover {
     background-color: black;
     color: white;
 }
