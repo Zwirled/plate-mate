@@ -57,23 +57,26 @@ function RecipeModal(props) {
         setOpen(false);
     };
 
+    console.log('Ingredients:', ingredients);
+
     const handleSave = () => {
         if (props) {
-            const recipe = {
+            const newRecipe = {
                 name: name || '',
                 image: image || '',
-                ingredients: Object.entries(ingredients || {})
-                    .filter(([key, value]) => key.startsWith('strIngredient') && value)
-                    .map(([key, value]) => {
-                        const ingredientIndex = key.slice(13);
+                ingredients: ingredients
+                    .filter((ingredient) => ingredient.name && ingredient.amount)
+                    .map((ingredient) => {
                         return {
-                            name: value,
-                            amount: ingredients[`strMeasure${ingredientIndex}`],
+                            name: ingredient.name,
+                            amount: ingredient.amount,
                         };
                     }),
                 instructions: instructions || '',
             };
-            localStorage.setItem('savedRecipe', JSON.stringify(recipe));
+            const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+            savedRecipes.push(newRecipe);
+            localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
         }
     };
 
