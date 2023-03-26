@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import RecipeFilter from '../RecipeFilter';
 import RecipeCard from '../RecipeCard';
 import Container from '@mui/material/Container';
 import { Grid } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import './style.css';
 
 function RecipeFeed() {
     const [recipes, setRecipes] = useState([]);
-
-    useEffect(() => {
+    const [selectedCategory, setSelectedCategory] = useState('Seafood'); useEffect(() => {
         getRecipes();
-    }, []);
+    }, [selectedCategory]);
 
     const getRecipes = async () => {
-        const api = await fetch(
-            'https://www.themealdb.com/api/json/v1/1/search.php?f=b'
-        );
+        const api = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`);
         const data = await api.json();
         const meals = data.meals || [];
 
@@ -24,59 +20,14 @@ function RecipeFeed() {
         console.log(meals);
     };
 
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+    };
+
     return (
         <Container>
             <h1>Recipe & Meal Ideas</h1>
-            <Grid id="filter" container spacing={1} columns={10}>
-                <Grid item xs={5} md={2}>
-                    <Typography>Filter:</Typography>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-                <Grid item xs={5} md={2}>
-                    <ButtonUnstyled size="small" color="primary">
-                        Option
-                    </ButtonUnstyled>
-                </Grid>
-            </Grid>
+            <RecipeFilter onCategoryChange={handleCategoryChange} />
             <Grid id="feedGrid" container spacing={0}>
                 {recipes.map((recipe) => (
                     <RecipeCard
