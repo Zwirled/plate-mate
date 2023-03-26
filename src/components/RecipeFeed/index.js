@@ -7,7 +7,7 @@ import './style.css';
 
 function RecipeFeed() {
     const [recipes, setRecipes] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState('Seafood');
+    const [selectedCategory, setSelectedCategory] = useState('');
 
     const getRecipes = useCallback(async () => {
         const api = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`);
@@ -18,8 +18,12 @@ function RecipeFeed() {
     }, [selectedCategory]);
 
     useEffect(() => {
-        getRecipes();
-    }, [getRecipes]);
+        if (selectedCategory) {
+            getRecipes();
+        } else {
+            setRecipes([]);
+        }
+    }, [selectedCategory, getRecipes]);
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
@@ -29,16 +33,20 @@ function RecipeFeed() {
         <Container>
             <h1>Recipe & Meal Ideas</h1>
             <RecipeFilter onCategoryChange={handleCategoryChange} />
-            <Grid id="feedGrid" container spacing={0}>
-                {recipes.map((recipe) => (
-                    <RecipeCard
-                        key={recipe.idMeal}
-                        name={recipe.strMeal}
-                        image={recipe.strMealThumb}
-                        id={recipe.idMeal}
-                    />
-                ))}
-            </Grid>
+            {selectedCategory ? (
+                <Grid id="feedGrid" container spacing={0}>
+                    {recipes.map((recipe) => (
+                        <RecipeCard
+                            key={recipe.idMeal}
+                            name={recipe.strMeal}
+                            image={recipe.strMealThumb}
+                            id={recipe.idMeal}
+                        />
+                    ))}
+                </Grid>
+            ) : (
+                <p>No results. Please try again.</p>
+            )}
         </Container>
     );
 }

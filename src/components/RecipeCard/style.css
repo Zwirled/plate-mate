@@ -29,16 +29,6 @@ button {
     padding-right: 10px;
 }
 
-
-#filter {
-    width: 50vw;
-    margin: auto;
-    background-color: #F7E5E0;
-    margin-bottom: 20px;
-    padding: 15px;
-    padding-top: 10px;
-}
-
 @media only screen and (max-width: 899px) {
     .recipeCardItem {
     flex-basis: calc(50% - 12.5px) !important;
