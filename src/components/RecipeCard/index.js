@@ -9,13 +9,16 @@ import RecipeModal from '../RecipeModal';
 import './style.css';
 
 function RecipeCard({ name, image, id }) {
+    // State to check whether the recipe modal is/isnt open, and for storing recipe data
     const [open, setOpen] = React.useState(false);
     const [recipeData, setRecipeData] = useState(null);
 
+    // Function to open the recipe modal
     const handleOpen = () => {
         setOpen(true);
     };
 
+    // Use effect to fetch recipe data from the API when the modal is open
     useEffect(() => {
         if (open && id) {
             fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -29,12 +32,15 @@ function RecipeCard({ name, image, id }) {
         }
     }, [open, id]);
 
+    // Function to close the recipe modal
     const handleClose = () => {
         setOpen(false);
     };
 
     return (
+        // Set up a grid item for the recipe card
         <Grid item xs={12} md={4} className="recipeCardItem">
+            {/* Render a card with an image and the recipe name */}
             <Card>
                 <CardMedia
                     component="img"
@@ -45,10 +51,12 @@ function RecipeCard({ name, image, id }) {
                 <CardContent>
                     <h2 className="recipeCardTitle">{name}</h2>
                 </CardContent>
+                {/* Render a button to open the recipe modal */}
                 <CardActions id="buttonContainer">
                     <ButtonUnstyled id="viewRecipeButton" onClick={handleOpen}>View recipe</ButtonUnstyled>
                 </CardActions>
             </Card>
+            {/* Render the recipe modal if recipe data is available */}
             {recipeData && (
                 <RecipeModal
                     open={open}
