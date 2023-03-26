@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Recipes from './pages/Recipes';
@@ -21,7 +21,7 @@ function App() {
     instruction: 'Preheat the oven to 200C/180C Fan/Gas 6.\r\nPut the biscuits in a large re-sealable freezer bag and bash with a rolling pin into fine crumbs. Melt the butter in a small pan, then add the biscuit crumbs and stir until coated with butter.'         
                 }];
  
-    const [storedRecipe, setStoredRecipe] = useLocalStorage("Recipe", Recipe);
+    const [storedRecipe] = useLocalStorage("Recipe", Recipe);
     console.log(storedRecipe);
   return (
     <Router basename="/">
