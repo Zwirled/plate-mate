@@ -43,7 +43,7 @@ function RecipeCard({ name, image, id }) {
                     alt={name}
                 />
                 <CardContent>
-                    <h2>{name}</h2>
+                    <h2 className="recipeCardTitle">{name}</h2>
                 </CardContent>
                 <CardActions id="buttonContainer">
                     <ButtonUnstyled id="viewRecipeButton" onClick={handleOpen}>View recipe</ButtonUnstyled>

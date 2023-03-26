@@ -75,7 +75,6 @@ function RecipeModal(props) {
                             <h2 className="recipeModalTitle">{name}</h2>
                         </div>
                         <div>
-                            <h3>ID</h3>
                             <h3>Ingredients:</h3>
                             <ul className="recipeModalList">
                                 {ingredients.map((ingredient, index) => (

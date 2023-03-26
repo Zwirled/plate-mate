@@ -9,24 +9,23 @@
     justify-content: center;
 }
 
-button {
-    background-color: #F7E5E0;
-    color: black;
-    border: 1px solid #ebd8d3;
-    border-radius: 5px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+.recipeCardTitle {
+    margin: 0;
 }
 
-#saveButton {
-    background-color: #A1BAA2;
+#viewRecipeButton, #saveButton {
+    background-color: #F7E5E0;
     color: black;
-    border: 1px solid #90aa91;
     border-radius: 5px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    transition: all 0.3s ease;
+}
+
+#viewRecipeButton:hover, #saveButton:hover {
+    background-color: black;
+    color: white;
 }
 
 @media only screen and (max-width: 899px) {

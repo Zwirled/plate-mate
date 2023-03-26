@@ -30,7 +30,7 @@ function RecipeFeed() {
     };
 
     return (
-        <Container>
+        <Container className="feed">
             <h1>Recipe & Meal Ideas</h1>
             <RecipeFilter onCategoryChange={handleCategoryChange} />
             {selectedCategory ? (
