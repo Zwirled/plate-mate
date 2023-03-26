@@ -52,9 +52,9 @@ function RecipeModal(props) {
 
     const { name, image, ingredients, instructions, ...other } = props;
 
-    const handleOpen = () => {
-        setOpen(true);
-    };
+    // const handleOpen = () => {
+    //     setOpen(true);
+    // };
 
     const handleClose = () => {
         setOpen(false);
