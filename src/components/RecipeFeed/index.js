@@ -6,9 +6,12 @@ import { Grid } from "@mui/material";
 import './style.css';
 
 function RecipeFeed() {
+
+    // Declare state variables using the useState hook
     const [recipes, setRecipes] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('');
 
+    // Define a function using the useCallback hook to retrieve recipe data from a user-selected category
     const getRecipes = useCallback(async () => {
         const api = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`);
         const data = await api.json();
@@ -17,6 +20,7 @@ function RecipeFeed() {
         setRecipes(meals);
     }, [selectedCategory]);
 
+    // Update the recipes in the feed based on the selected category
     useEffect(() => {
         if (selectedCategory) {
             getRecipes();
@@ -25,10 +29,12 @@ function RecipeFeed() {
         }
     }, [selectedCategory, getRecipes]);
 
+    // Updates the selected category
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
     };
 
+    // Render the component with the updated state and user interactions
     return (
         <Container className="feed">
             <h1>Recipe & Meal Ideas</h1>
