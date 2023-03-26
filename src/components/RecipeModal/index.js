@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { styled, Box } from '@mui/system';
 import ModalUnstyled from '@mui/base/ModalUnstyled';
+import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import './style.css';
 
 function RecipeModal(props) {
@@ -56,6 +57,26 @@ function RecipeModal(props) {
         setOpen(false);
     };
 
+    const handleSave = () => {
+        if (props) {
+            const recipe = {
+                name: name || '',
+                image: image || '',
+                ingredients: Object.entries(ingredients || {})
+                    .filter(([key, value]) => key.startsWith('strIngredient') && value)
+                    .map(([key, value]) => {
+                        const ingredientIndex = key.slice(13);
+                        return {
+                            name: value,
+                            amount: ingredients[`strMeasure${ingredientIndex}`],
+                        };
+                    }),
+                instructions: instructions || '',
+            };
+            localStorage.setItem('savedRecipe', JSON.stringify(recipe));
+        }
+    };
+
     return (
         <div>
             <StyledModal className="recipeModal"
@@ -87,6 +108,9 @@ function RecipeModal(props) {
                         <div>
                             <h3>Method:</h3>
                             <p>{instructions}</p>
+                        </div>
+                        <div>
+                            <ButtonUnstyled id="saveButton" onClick={handleSave}>Save recipe</ButtonUnstyled>
                         </div>
                     </div>
                 </Box>
