@@ -4,13 +4,6 @@ function SavedRecipeItem() {
     // retrieve saved recipes from localStorage
     const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
 
-    const handleRemove = (index) => {
-        const updatedRecipes = [...savedRecipes];
-        updatedRecipes.splice(index, 1);
-        localStorage.setItem('savedRecipes', JSON.stringify(updatedRecipes));
-        window.location.reload();
-    };
-
     return (
         <div>
             {savedRecipes.map((recipe, index) => (
@@ -25,7 +18,6 @@ function SavedRecipeItem() {
                     </ul>
                     <h3>Instructions:</h3>
                     <p>{recipe.instructions}</p>
-                    <button onClick={() => handleRemove(index)}>Remove</button>
                 </div>
             ))}
         </div>
