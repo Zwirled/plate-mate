@@ -14,7 +14,7 @@ Many individuals and families face uncertainty about deciding what to cook for a
   * [Usage](#usage)
   * [Acceptance Criteria](#acceptance-criteria)
   * [Mock-Up](#mock-up)
-  * [Technologies](#new-technologies)
+  * [New Technologies](#new-technologies)
   * [Review](#review)
   * [Credits](#credits)
   * [Helpful Resources](#helpful-resources)
