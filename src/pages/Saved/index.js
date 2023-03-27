@@ -1,14 +1,17 @@
 import React from 'react';
+import Container from '@mui/material/Container';
 import SavedRecipes from '../../components/SavedRecipes';
 
 function Saved() {
     return (
-        <section>
-            <div>
-                <h1>Saved Plates</h1>
-                <SavedRecipes />
-            </div>
-        </section>
+        <main>
+            <Container>
+                <div>
+                    <h1>Saved Plates</h1>
+                    <SavedRecipes />
+                </div>
+            </Container>
+        </main>
     );
 }
 
