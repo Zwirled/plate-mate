@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# Plate Mate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This is the final project for the edX Skills Boot Camp in Front-End Web Development to build a client-side application by a group of members.
 
-In the project directory, you can run:
+Many individuals and families face uncertainty about deciding what to cook for a meal. The application aims to help people get ideas and plan meals without stress and hassle.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ ## Table of Contents
+  * [Description](#description)
+  * [User Story](#user-story)
+  * [Usage](#usage)
+  * [Acceptance Criteria](#acceptance-criteria)
+  * [Mock-Up](#mock-up)
+  * [New Technologies](#new-technologies)
+  * [Review](#review)
+  * [Credits](#credits)
+  * [Helpful Resources](#helpful-resources)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## User Story
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+AS A homemaker, I WANT to get ideas and plan the meals for my family SO THAT I can create a shopping list to plan meals quickly and easily.      
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After download, the application can be installed and invoked by using the following commands at the terminal:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acceptance Criteria
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Technical (0/20)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Application uses React (0/5)
 
-## Learn More
+* Application uses Node (0/5)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Application uses at least two libraries, packages, or new technologies (0/5)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Application has both GET and POST routes for retrieving and adding new data (0/5)
 
-### Code Splitting
+### Concept (0/10)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Group presented unique and novel project idea (0/5)
 
-### Analyzing the Bundle Size
+* Group clearly and concisely articulated project idea (0/5)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Deployment (0/20)
 
-### Making a Progressive Web App
+* Group demoed application using deployed live application URL at Netlify (0/10)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Every group member submitted application GitHub URL (0/10)
 
-### Advanced Configuration
+### Repository Quality (0/10)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Repository has a unique name (0/2)
 
-### Deployment
+* Repository follows best practices for file structure and naming conventions (0/2)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Repository follows best practices for variable and function naming conventions, indentation, quality comment (0/2)
 
-### `npm run build` fails to minify
+* Repository contains multiple descriptive commit messages (0/2)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Repository contains quality README with description, screenshot, link to deployed application (0/2)
+
+### Application Quality (0/15)
+
+* Application user experience is intuitive and easy to navigate (0/5)
+
+* Application user interface style is clean and polished (0/5)
+
+* Application is responsive (0/5)
+
+### Presentation (0/10)
+
+* Group presented using Powerpoint or similar presentation software (0/3)
+
+* Every group member spoke during presentation (0/4)
+
+* Presentation followed Project Presentation Template (0/3)
+
+### Collaboration (0/15)
+
+* GitHub contributions (0/15)
+
+---
+
+## Mock-Up
+
+The following images show a mock-up of the generated HTML file’s appearance and functionalities:
+
+On the home page, you can see a styled and clean design of the theme with a clear message to guide users for meal planning.
+
+![An image of Plat Mate home webpage ](./src/images/home.png)
+
+On the Recipe feed page you can see a collection of recipe and meal ideas with a filter for options.
+
+![An image of Plat Mate recipe feed webpage ](./src/images/ricipefeed.png)
+
+On the Saved plates page you can see the saved plates.
+
+![An image of Plat Mate saved plates webpage ](./src/images/savedplates.png)
+
+On the Shopping list page you can see the shopping list.
+
+![An image of Plat Mate shopping list webpage ](./src/images/shoppinglist.png)
+
+---
+
+## New Technologies
+
+TheMealDB, Material UI
+
+---
+
+## Review
+
+---
+
+The Plate Mate group members review each other's code, providing feedback on errors and making sure that all of the acceptance criteria have been met.
+
+* [The URL of the deployed application](https://plate-mate.netlify.app/)
+
+* [The URL of the GitHub repository.](https://github.com/Zwirled/plate-mate.git)
+
+---
+
+## Credits
+
+Harry Holder, Lee, Kwok Leung & Amelia Bramwell
+
+---
+
+## Helpful Resources
+
+- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+
+- [React documentation](https://reactjs.org/)
+
+- [Making a Progressive Web App](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+- [Advanced Configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+- [Deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+- [MDN Javascript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/)
+
+- [Github Pages Guide](https://pages.github.com/)
