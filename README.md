@@ -43,7 +43,7 @@ npm start
 
 ## Acceptance Criteria
 
-# Technical (0/20)
+### Technical (0/20)
 
 * Application uses React (0/5)
 
@@ -53,19 +53,19 @@ npm start
 
 * Application has both GET and POST routes for retrieving and adding new data (0/5)
 
-# Concept (0/10)
+### Concept (0/10)
 
 * Group presented unique and novel project idea (0/5)
 
 * Group clearly and concisely articulated project idea (0/5)
 
-# Deployment (0/20)
+### Deployment (0/20)
 
 * Group demoed application using deployed live application URL at Netlify (0/10)
 
 * Every group member submitted application GitHub URL (0/10)
 
-# Repository Quality (0/10)
+### Repository Quality (0/10)
 
 * Repository has a unique name (0/2)
 
@@ -77,7 +77,7 @@ npm start
 
 * Repository contains quality README with description, screenshot, link to deployed application (0/2)
 
-# Application Quality (0/15)
+### Application Quality (0/15)
 
 * Application user experience is intuitive and easy to navigate (0/5)
 
@@ -85,7 +85,7 @@ npm start
 
 * Application is responsive (0/5)
 
-# Presentation (0/10)
+### Presentation (0/10)
 
 * Group presented using Powerpoint or similar presentation software (0/3)
 
@@ -93,7 +93,7 @@ npm start
 
 * Presentation followed Project Presentation Template (0/3)
 
-# Collaboration (0/15)
+### Collaboration (0/15)
 
 * GitHub contributions (0/15)
 
