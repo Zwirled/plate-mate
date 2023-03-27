@@ -4,7 +4,7 @@
 
 This is the final project for the edX Skills Boot Camp in Front-End Web Development to build a client-side application by a group of members.
 
-Many individuals and families face uncertainty about deciding what to cook and eat for a meal. The application aims to help people get ideas and plan meals without stress and hassle.
+Many individuals and families face uncertainty about deciding what to cook for a meal. The application aims to help people get ideas and plan meals without stress and hassle.
 
 ---
 
