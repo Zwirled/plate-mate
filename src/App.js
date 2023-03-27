@@ -6,10 +6,12 @@ import Saved from './pages/Saved';
 import ShoppingList from './pages/ShoppingList';
 import Header from './components/Header';
 import Footer from './components/Footer'
+import SavedRecipeItem from './components/SavedRecipeItem'
 
 function App() {
+  SavedRecipeItem()
   return (
-
+ 
     <Router basename="/">
       <div>
         <Header />
