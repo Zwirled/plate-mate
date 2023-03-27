@@ -1,6 +1,15 @@
 import React from 'react';
+import useLocalStorage from '../LocalStorage'
 
 function SavedRecipeItem() {
+
+    //Saved recipes from local storage are stored in storeRecipe
+    //Set items into local storage with setStoredRecipe: 
+    //const [storedRecipe, setStoredRecipe] = useLocalStorage("Recipe", Recipe);
+
+    const [storedRecipe] = useLocalStorage("Recipe");
+    console.log("stored values", storedRecipe);
+
 
     // Retrieve saved recipes from localStorage
     const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
