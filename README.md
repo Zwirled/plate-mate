@@ -101,7 +101,7 @@ npm start
 
 ## Mock-Up
 
-The following images shows a mock-up of the generated HTML file’s appearance and functionalities:
+The following images show a mock-up of the generated HTML file’s appearance and functionalities:
 
 On the home page, you can see a styled and clean design of the theme with a clear message to guide users for meal planning.
 
