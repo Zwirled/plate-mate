@@ -111,11 +111,11 @@ On the Recipe feed page you can see a collection of recipe and meal ideas with a
 
 ![An image of Plat Mate recipe feed webpage ](./src/images/ricipefeed.png)
 
-On the Saved plates page you will see the screen after you searched for a country.
+On the Saved plates page you can see the saved plates.
 
 ![An image of Plat Mate saved plates webpage ](./src/images/savedplates.png)
 
-On the Shopping list page you will see the screen after you searched for a country.
+On the Shopping list page you will see the shopping list.
 
 ![An image of Plat Mate shopping list webpage ](./src/images/shoppinglist.png)
 
