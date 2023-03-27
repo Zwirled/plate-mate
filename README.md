@@ -12,7 +12,7 @@ Many individuals and families face uncertainty about deciding what to cook and e
   * [Description](#description)
   * [User Story](#user-story)
   * [Usage](#usage)
-  * [Technical Acceptance Criteria](#acceptance-criteria)
+  * [Acceptance Criteria](#acceptance-criteria)
   * [Mock-Up](#mock-up)
   * [Technologies](#new-technologies)
   * [Review](#review)
