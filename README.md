@@ -115,7 +115,7 @@ On the Saved plates page you can see the saved plates.
 
 ![An image of Plat Mate saved plates webpage ](./src/images/savedplates.png)
 
-On the Shopping list page you will see the shopping list.
+On the Shopping list page you can see the shopping list.
 
 ![An image of Plat Mate shopping list webpage ](./src/images/shoppinglist.png)
 
