@@ -3,9 +3,17 @@
   flex-direction: row;
 }
 
+.imgContainer {
+  text-align: right;
+  align-items: right;
+}
+
 img {
-  display: block;
   width: 75%;
+}
+
+.recipeTitle {
+  text-align: right;
 }
 
 .ingredientsTitle {
