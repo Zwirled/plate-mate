@@ -1,46 +1,47 @@
 #filter {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .filterContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .filter {
-    background-color: #F7E5E0;
-    padding: 15px;
-    border: 0;
-    border-radius: 3px;
-    outline: 0;
-    width: calc(33.333% - 16.5px);
+  background-color: #f7e5e0;
+  padding: 15px;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  width: calc(33.333% - 16.5px);
+  margin: auto;
 }
 
 select {
-    display: block;
-    width: 100%;
-    font-size: 1em;
-    padding: 0.8rem 0.5rem;
-    border: 1px solid #000;
-    font-family: inherit;
-    /** for the dropdown indicator */
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1em;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  padding: 0.8rem 0.5rem;
+  border: 1px solid #000;
+  font-family: inherit;
+  /** for the dropdown indicator */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 899px) {
-    .filter {
-        width: calc(50% - 12.5px);
-    }
+  .filter {
+    width: calc(50% - 12.5px);
+  }
 }
 
 @media only screen and (max-width: 550px) {
-    .filter {
-        width: 100%;
-    }
+  .filter {
+    width: 100%;
+  }
 }
