@@ -1,0 +1,35 @@
+.shoppingList {
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.savedIngredientsTitle {
+  font-size: 2rem;
+  line-height: 4rem;
+  font-family: Caveat;
+}
+
+.ingredientList {
+  margin: 0px;
+  font-family: Caveat;
+  list-style: none;
+  border: 1px solid red;
+  padding: 0px;
+}
+
+.ingredientItem {
+  font-family: Caveat;
+  font-size: 2rem;
+}
+
+.removeBtn {
+  margin-bottom: 2px;
+  margin-left: 6px;
+}
+
+/* .paperEnd {
+
+  } */
