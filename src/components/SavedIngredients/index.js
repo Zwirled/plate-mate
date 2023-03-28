@@ -19,7 +19,7 @@ function SavedIngredients() {
         <div>
             {savedIngredients.length === 0 ? (
                 <p>No saved ingredients</p>
-            ) : (
+            ) : (<>
                 <div className="shoppingList">
                     <h2 className="savedIngredientsTitle">Saved Ingredients:</h2>
                     <ul className="ingredientList">
@@ -30,8 +30,9 @@ function SavedIngredients() {
                             </li>
                         ))}
                     </ul>
-                    <div className="paperEnd"></div>
                 </div>
+                        <div className="paperEnd"></div>
+                        </>
             )}
         </div>
     );
