@@ -43,7 +43,7 @@ function SavedRecipes() {
           <div key={index}>
             <Grid className="container" container spacing={2}>
               <Grid item sm={12}>
-                <h2>{recipe.name}</h2>
+                <h2 className="recipeTitle">{recipe.name}</h2>
               </Grid>
               <Grid item sm={6}>
                 <img src={recipe.image} alt={recipe.name} />

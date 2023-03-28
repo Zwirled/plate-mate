@@ -1,12 +1,23 @@
-img {
-    display: block;
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
+img {
+  display: block;
+  width: 75%;
+}
+
+.ingredientsTitle {
+  margin-top: 0px;
+}
+
+.ingredientsList,
+.listItem {
+  line-height: 1;
+}
+
+.ingredientBtn {
+  margin-bottom: 2px;
+  margin-left: 4px;
 }
