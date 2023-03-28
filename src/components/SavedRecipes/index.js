@@ -42,10 +42,11 @@ function SavedRecipes() {
         savedRecipes.map((recipe, index) => (
           <div key={index}>
             <Grid className="container" container spacing={2}>
-              <Grid item sm={12}>
+              <Grid item sm={6}>
                 <h2 className="recipeTitle">{recipe.name}</h2>
               </Grid>
-              <Grid item sm={6}>
+              <Grid item sm={6}></Grid>
+              <Grid className="imgContainer" item sm={6}>
                 <img src={recipe.image} alt={recipe.name} />
               </Grid>
               <Grid className="ingredients" item sm={6}>
