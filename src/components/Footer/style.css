@@ -13,11 +13,11 @@ footer {
 }
 
 footer a {
-  color: var(--brown);
+  color: var(--black);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 footer a:hover {
-  color: var(--black);
+  color: var(--white);
 }
