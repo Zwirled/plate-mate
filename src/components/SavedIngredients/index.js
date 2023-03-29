@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./style.css";
 
 function SavedIngredients() {
     const [savedIngredients, setSavedIngredients] = useState([]);
@@ -18,18 +19,20 @@ function SavedIngredients() {
         <div>
             {savedIngredients.length === 0 ? (
                 <p>No saved ingredients</p>
-            ) : (
-                <>
-                    <h2>Saved Ingredients:</h2>
-                    <ul>
+            ) : (<>
+                <div className="shoppingList">
+                    <h2 className="savedIngredientsTitle">Saved Ingredients:</h2>
+                    <ul className="ingredientList">
                         {savedIngredients.map((ingredient, index) => (
-                            <li key={index}>
-                                {ingredient}
-                                <button onClick={() => handleRemoveIngredient(ingredient)}>Remove</button>
+                            <li className="ingredientItem" key={index}>
+                                {"- " + ingredient}
+                                <button className="removeBtn" onClick={() => handleRemoveIngredient(ingredient)}>Remove</button>
                             </li>
                         ))}
                     </ul>
-                </>
+                </div>
+                        <div className="paperEnd"></div>
+                        </>
             )}
         </div>
     );
