@@ -9,7 +9,6 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-
     <Router basename="/">
       <div>
         <Header />

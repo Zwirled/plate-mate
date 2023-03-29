@@ -1,0 +1,49 @@
+.shoppingList {
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: transparent;
+  background-image: url(../../images/postItBody.png);
+  background-position: top;
+  background-size: auto;
+  background-repeat: repeat-y;
+  margin-bottom: 0px;
+}
+
+.savedIngredientsTitle {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: Caveat;
+  background-color: transparent;
+  padding: 0;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+
+.ingredientList {
+  width: 100%;
+  margin: 0px;
+  font-family: Caveat;
+  font-size: 2rem;
+  list-style: none;
+  padding: 0px;
+}
+
+.removeBtn {
+  margin-bottom: 2px;
+  margin-left: 14px;
+}
+
+.paperEnd {
+  width: 80vw;
+  margin: auto;
+  margin-top: 0px;
+  height: 125px;
+  background-image: url(../../images/postItBottom.png);
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}

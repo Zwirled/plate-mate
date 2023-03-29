@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.imgContainer {
+  text-align: right;
+  align-items: right;
+}
+
+img {
+  width: 75%;
+}
+
+.recipeTitle {
+  text-align: right;
+}
+
+.ingredientsTitle {
+  margin-top: 0px;
+}
+
+.ingredientsList,
+.listItem {
+  line-height: 1;
+}
+
+.ingredientBtn {
+  margin-bottom: 2px;
+  margin-left: 4px;
+}
