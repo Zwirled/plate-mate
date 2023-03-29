@@ -107,7 +107,7 @@ On the home page, you can see a styled and clean design of the theme with a clea
 
 ![An image of Plat Mate home webpage ](./src/images/home.png)
 
-On the Recipe feed page you can see a collection of recipe and meal ideas with a filter for options.
+On the Recipe feed page you can see a collection of recipe and meal ideas with a pull-down manual for selecion from the categories of meals.
 
 ![An image of Plat Mate recipe feed webpage ](./src/images/ricipefeed.png)
 
