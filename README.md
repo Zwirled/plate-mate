@@ -111,7 +111,7 @@ On the Recipe feed page you can see a collection of recipe and meal ideas with a
 
 ![An image of Plat Mate recipe feed webpage ](./src/images/ricipefeed.png)
 
-On the Saved plates page you can see the saved plates.
+On the Saved plates page you can see the saved plates with instructions and ingredients.
 
 ![An image of Plat Mate saved plates webpage ](./src/images/savedplates.png)
 
