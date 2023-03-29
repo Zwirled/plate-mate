@@ -1,23 +1,23 @@
 :root {
-    --black: #000000;
-    --white: #ffffff;
-    --pink: #F7E5E0;
-    --brown: #C5A59D;
-    --green: #A1BAA2;
+  --black: #000000;
+  --white: #ffffff;
+  --pink: #f7e5e0;
+  --brown: #c5a59d;
+  --green: #a1baa2;
 }
 
 footer {
-    background-color: var(--pink);
-    text-align: center;
-    color: var(--black);
+  background-color: var(--green);
+  text-align: center;
+  color: var(--black);
 }
 
 footer a {
-    color: var(--brown);
-    text-decoration: none;
-    transition: all 0.3s ease;
+  color: var(--brown);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 footer a:hover {
-    color: var(--black);
+  color: var(--black);
 }
