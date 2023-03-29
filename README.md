@@ -115,7 +115,7 @@ On the Saved plates page you can see the saved plates with instructions and ingr
 
 ![An image of Plat Mate saved plates webpage ](./src/images/savedplates.png)
 
-On the Shopping list page you can see the shopping list.
+On the Shopping list page you can see a shopping list of saved ingredients.
 
 ![An image of Plat Mate shopping list webpage ](./src/images/shoppinglist.png)
 
