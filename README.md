@@ -107,15 +107,15 @@ On the home page, you can see a styled and clean design of the theme with a clea
 
 ![An image of Plat Mate home webpage ](./src/images/home.png)
 
-On the Recipe feed page you can see a collection of recipe and meal ideas with a filter for options.
+On the Recipe feed page you can see a collection of recipe and meal ideas with a pull-down manual for selecion from the categories of meals.
 
 ![An image of Plat Mate recipe feed webpage ](./src/images/ricipefeed.png)
 
-On the Saved plates page you can see the saved plates.
+On the Saved plates page you can see the saved plates with instructions and ingredients.
 
 ![An image of Plat Mate saved plates webpage ](./src/images/savedplates.png)
 
-On the Shopping list page you can see the shopping list.
+On the Shopping list page you can see a shopping list of saved ingredients.
 
 ![An image of Plat Mate shopping list webpage ](./src/images/shoppinglist.png)
 
