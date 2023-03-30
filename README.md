@@ -160,3 +160,21 @@ Harry Holder, Lee, Kwok Leung & Amelia Bramwell
 - [MDN Javascript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/)
 
 - [Github Pages Guide](https://pages.github.com/)
+
+- [Getting Started With Material-UI For React (Material Design For React)](https://medium.com/codingthesmartway-com-blog/getting-started-with-material-ui-for-react-material-design-for-react-364b2688b555)
+
+- [The React useEffect Hook for Absolute Beginners](https://www.freecodecamp.org/news/react-useeffect-absolute-beginners/)
+
+- [How the useEffect Hook Works (with Examples)](https://daveceddia.com/useeffect-hook-examples/)
+
+- [How To Call Web APIs with the useEffect Hook in React](https://www.digitalocean.com/community/tutorials/how-to-call-web-apis-with-the-useeffect-hook-in-react)
+
+- [useState in React: A complete guide](https://blog.logrocket.com/guide-usestate-react/)
+
+- [Your Guide to React.useCallback()](https://dmitripavlutin.com/react-usecallback/)
+
+- [How to use useCallback() hook](https://medium.com/@dev_one/how-to-use-usecallback-hook-35dc047aee48)
+
+- [Understanding useMemo and useCallback](https://www.joshwcomeau.com/react/usememo-and-usecallback/)
+
+- [Using forwardRef in React to clean up the DOM](https://blog.logrocket.com/cleaning-up-the-dom-with-forwardref-in-react/)
